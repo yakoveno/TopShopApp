@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="employeeTab.css">
+    <title>Order Details</title>
+</head>
+<body>
+    <h1 class="window-drag">כרטיס עובד</h1>
+    <div id="windowClose"><h2 class="window-title">פרטי עובד</h2></div>
+    <div id="employeeDetails">
+        <img id="employeeAvatar" src="">
+        <p id="employeeName"></p>
+        <p id="employeeEmail"></p>
+        <p id="employeePhone"></p>
+        <p id="employeeRole"></p>
+        <p id="employeeActive"></p>
+        
+    </div>
+    <div id="employeeInfo">
+        <div id="employeeCustomers" class="tab">
+            <h4>לקוחות</h4>
+        </div>
+        <div id="employeeOrders" class="tab">
+            <h4>הזמנות</h4>
+        </div>
+        <div id="employeeItems" class="tab">
+            <h4>מוצרים</h4>
+        </div>
+    </div>
+    <script src="employeeTab.js"></script>
+    <script>
+        const windowClose = document.getElementById("windowClose");
+        const closeButton = document.createElement("li");
+        closeButton.className = "closeButton";
+        closeButton.innerHTML = `סגור`;
+        windowClose.appendChild(closeButton);
+        closeButton.addEventListener('click', () => { window.close(); });
+
+    </script>
+</body>
+</html>

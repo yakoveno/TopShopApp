@@ -1,0 +1,1540 @@
+body {
+	display: initial;
+	align-items: initial;
+	justify-content: initial;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #ccc;
+}
+
+/* Login Container Style*/
+#LoginContainer {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 10px;
+	width: 300px;
+	margin: auto;
+}
+
+#email,
+#password,
+#login {
+	padding: 10px;
+	border: 2px solid #5992ad;
+	border-radius: 5px;
+	font-size: 14px;
+	margin: 5px;
+}
+
+#login {
+	background-color: #3498db;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#login:hover {
+	background-color: #29b99a;
+}
+
+#loginMessage {
+	color: red;
+	font-size: 14px;
+}
+
+/* Main Screen*/
+#MainScreen {
+	height: 100vh;
+	display: none;
+}
+
+/*window-title*/
+.window-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	direction: rtl;
+	font-weight: bold;
+}
+
+.window-title button,
+input {
+	margin-right: 5px;
+}
+
+.window-title button {
+	cursor: pointer;
+}
+
+.window-title button:hover {
+	background-color: #29b99a;
+}
+
+.window-title input {
+	width: 100px;
+}
+
+/*panel-controller*/
+.panel-controller {
+	list-style: none;
+	text-align: center;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+}
+
+.panel-controller li {
+	margin: 5px;
+	font-size: 15px;
+	color: #000000;
+	border-bottom: 1px solid #3498db;
+}
+
+.panel-controller li:hover {
+	color: #3498db;
+	border-bottom: 1px solid #000000;
+}
+
+.panel-controller input {
+	width: 100px;
+}
+
+/* Shedule Style */
+#ScheduleProfile {
+	display: flex;
+	flex-direction: row-reverse;
+	width: 100%;
+	height: 40%;
+}
+
+#ScheduleBox {
+	overflow: hidden;
+	background-color: #99b3ff;
+	padding: 5px;
+	margin: 5px 0px 5px 5px;
+	border-radius: 5px;
+}
+
+#ScheduleContainer {
+	display: flex;
+	overflow: auto;
+}
+
+.Schedule {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.dateCard {
+	width: 180px;
+	height: 300px;
+	display: grid;
+	padding: 5px;
+	background-color: #505b6c;
+	border-radius: 10px;
+	margin: 5px 0px 5px 5px;
+}
+
+.dateCard:hover {
+	background-color: #51627e;
+}
+
+.dateCard p {
+	margin: 4px;
+	color: #000000;
+	text-align: center;
+	font-size: medium;
+	border-radius: 5px;
+}
+
+.NotesHolder {
+	display: grid;
+	overflow-y: auto;
+}
+
+.NotesHolder::-webkit-scrollbar {
+	width: 0.1em;
+}
+
+.orderNote {
+	background-color: #c0aa59;
+	border-radius: 10px;
+	cursor: pointer;
+	margin: 0.3rem;
+}
+
+.orderNote p {
+	font-size: small;
+}
+
+.orderNote:hover {
+	border: 1px solid #000000;
+}
+
+.employeeNote {
+	display: grid;
+	background-color: #a3a6bd;
+	border-radius: 10px;
+	cursor: pointer;
+	margin: 0.3rem;
+}
+
+.employeeNote p {
+	font-size: small;
+}
+
+.employeeNote:hover {
+	border: 1px solid #000000;
+}
+
+.employeeNote button {
+	margin: 0 15px 5px 15px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.employeeNote button:hover {
+	background-color: #29b99a;
+}
+
+/* Profile Style*/
+#ProfileBox {
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+	background-color: #99b3ff;
+	direction: rtl;
+}
+
+#PersonProfile {
+	display: flex;
+}
+
+.PersonInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.PersonInfo img {
+	width: 75px;
+	height: 80px;
+	border-radius: 50px;
+}
+
+.PersonInfo p {
+	margin: 0;
+	padding: 5px;
+	font-size: large;
+}
+
+/* Employee Info*/
+.EmployeeInfo {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.TabButton {
+	margin-right: 5px;
+	width: 80px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.TabButton:hover {
+	background-color: #29b99a;
+}
+
+.FunctionsNav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Update Profile*/
+.UpdateProfile {
+	display: grid;
+	grid-template-columns: max-content auto;
+	grid-gap: 10px;
+	height: 100%;
+}
+
+.UpdateProfile input {
+	width: 140px;
+}
+
+.UpdateProfile input:hover {
+	border-color: #007bff;
+}
+
+.SaveProfile {
+	cursor: pointer;
+}
+
+.SaveProfile:hover {
+	background-color: #29b99a;
+}
+
+/* New Message*/
+.NewMessage {
+	display: grid;
+	height: 100%;
+}
+
+.NewMessageTitel:hover,
+.NewMessageText:hover {
+	border-color: #007bff;
+}
+
+.MessageReceivers {
+	display: flex;
+	overflow: auto;
+}
+
+.MessageReceivers::-webkit-scrollbar {
+	width: 15px;
+	height: 10px;
+}
+
+.MessageReceivers::-webkit-scrollbar-thumb {
+	background-color: #628c8f;
+	border-radius: 5px;
+}
+
+.MessageReceivers button {
+	padding: 5px;
+	margin: 0.3rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.MessageReceivers button.selected {
+	background-color: #29b99a;
+}
+
+.NewMessageText {
+	padding: 5px;
+	margin: 0.3rem;
+	border-radius: 5px;
+	height: 120px;
+}
+
+.SendButton {
+	cursor: pointer;
+}
+
+.SendButton:hover {
+	background-color: #29b99a;
+}
+
+/* New Note*/
+.NewNote {
+	display: grid;
+	height: 100%;
+}
+
+.NewNoteTitel:hover,
+.NewNoteText:hover {
+	border-color: #007bff;
+}
+
+.NewNoteText {
+	padding: 5px;
+	margin: 0.3rem;
+	border-radius: 5px;
+	height: 160px;
+}
+
+.NewNoteTitel,
+.NewNoteDate {
+	margin: 0.3rem;
+}
+
+.MessagesNav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Message Card*/
+.MessageCard {
+	padding: 5px;
+	margin: 0.3rem;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+
+.MessageHeadName,
+.MessageHeadTitel,
+.MessageHeadDate {
+	text-align: right;
+	font-size: small;
+}
+
+.MessageBody.expanded {
+	display: block;
+	padding: 5px;
+	margin: 0.3rem;
+	border-radius: 5px;
+	font-size: small;
+}
+
+.MessageBody {
+	display: none;
+	padding-top: 10px;
+}
+
+.MessageStatus,
+.MessageState {
+	margin-right: 5px;
+	width: 80px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.MessageStatus:hover,
+.MessageState:hover {
+	background-color: #29b99a;
+}
+
+.TabDisplay {
+	height: 100%;
+	overflow: overlay;
+}
+
+.TabDisplay::-webkit-scrollbar {
+	width: 0.1em;
+}
+
+#RoleTab {
+	height: 60%;
+	display: flex;
+}
+
+/* Manager tab */
+.ManagerTab {
+	display: flex;
+	flex-direction: row;
+	direction: rtl;
+	width: 100%;
+}
+
+/*  Navigation */
+#Navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-color: #505b6c;
+	padding: 5px;
+	margin: 0px 5px 5px 5px;
+	border-radius: 5px;
+}
+
+.NavigationLink {
+	writing-mode: vertical-rl;
+	vertical-align: text-top;
+	font-size: 20px;
+	margin-top: 15px;
+	list-style: none;
+	color: #000000;
+	border-left: 3px solid #3498db;
+	cursor: pointer;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.NavigationLink:hover {
+	color: #3498db;
+	border-left: 1px solid #000000;
+}
+
+#Screen {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+}
+
+/*  Orders Tab */
+#OrdersBox,
+#InfosBox {
+	display: flex;
+	flex-direction: column;
+	background-color: #99b3ff;
+	padding: 5px;
+	margin: 0px 0px 5px 5px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+#Orders {
+	overflow-y: auto;
+}
+
+#Orders::-webkit-scrollbar {
+	width: 0.1em;
+}
+
+.Order {
+	padding: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+	margin: 5px;
+}
+
+.Order:hover {
+	background-color: #ddd;
+}
+
+.Order li {
+	list-style-type: none;
+	margin: 3px;
+}
+
+#Infos {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+
+/* Style for the Statuses Info*/
+#InfoTabTop {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: center;
+}
+
+#OrdersStatusInfo,
+#OrdersEmployeeInfo,
+#OrdersRevenueInfo {
+	background-color: #e4e4e4;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+}
+
+#OrdersStatusInfo span,
+#OrdersEmployeeInfo span,
+#OrdersRevenueInfo span {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#OrdersStatusInfo,
+#OrdersEmployeeInfo {
+	width: 180px;
+}
+
+#OrdersRevenueInfo {
+	width: 450px;
+}
+
+#OrdersStatusInfo p,
+#OrdersEmployeeInfo p,
+#OrdersRevenueInfo p {
+	margin: 5px;
+	text-align: center;
+	border-bottom: 3px solid #3498db;
+}
+
+#OrdersRevenue {
+	display: flex;
+}
+
+#OrdersCompleted,
+#OrdersUncompleted,
+#OrdersCanceled {
+	margin: 0px 5px 5px 5px;
+	padding: 5px;
+	list-style-type: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+.statusList li,
+.employeeList li {
+	cursor: pointer;
+	margin-right: 10px;
+}
+
+.statusList li:hover,
+.employeeList li:hover {
+	color: #3498db;
+}
+
+#OrdersCompleted:hover,
+#OrdersUncompleted:hover,
+#OrdersCanceled:hover {
+	background-color: #ddd;
+}
+
+.OrdersRevenueInfoHeader {
+	margin-top: 5px;
+	text-align: center;
+	border-bottom: 3px solid #3498db;
+}
+
+#InfoTabBottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	overflow: auto;
+}
+
+#OrdersInfoContent {
+	overflow: overlay;
+	margin: 0px 5px 5px 5px;
+	width: 220px;
+}
+
+#OrdersInfoContent::-webkit-scrollbar {
+	width: 0.1em;
+}
+
+.OrderCard {
+	list-style-type: none;
+	background-color: #e4e4e4;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.OrderCard li {
+	padding: 5px;
+	margin: 5px;
+}
+
+.OrderCard:hover {
+	background-color: #ddd;
+}
+
+#OrdersInfoCharts {
+	display: flex;
+	overflow: overlay;
+	height: 365px;
+}
+
+#OrdersInfoCharts::-webkit-scrollbar {
+	width: 0.1em;
+}
+
+#OrdersStatusesQuantity {
+	margin: 5px;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+	padding: 5px;
+}
+
+#OrdersStatusesPrice {
+	margin: 5px;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+	padding: 5px;
+}
+
+#Charts {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	background-color: #99b3ff;
+	padding: 5px;
+	margin: 0px 0px 5px 5px;
+	border-radius: 5px;
+	overflow: auto;
+}
+
+#Charts::-webkit-scrollbar {
+	width: 0.1em;
+}
+
+.Chart {
+	margin: 5px;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+	flex: 1;
+}
+
+#CustomersBox {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+#Customers{
+	display: flex;
+	flex-direction: column;
+	background-color: #99b3ff;
+	border-radius: 5px;
+	margin: 0px 0px 5px 5px;
+}
+
+#CustomerList {
+	overflow: auto;
+}
+
+#CustomerList::-webkit-scrollbar{
+	width: 0.1em;
+}
+
+#CustomersInfos {
+	display: flex;
+	flex-direction: column;
+	background-color: #99b3ff;
+	border-radius: 5px;
+	margin: 0px 0px 5px 5px;
+}
+
+#CustomersInfosContent {
+	display: flex;
+	flex-direction: column;
+}
+
+#CutomersCharts{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	margin: 0px 0px 5px 5px;
+	background-color: #99b3ff;
+	border-radius: 5px;
+}
+
+#CutomersCharts::-webkit-scrollbar{
+	width: 0.1em;
+}
+
+#CustomersRevenueOrders,
+#CustomersStatusOrders {
+	border-radius: 5px;
+	background-color: #e4e4e4;
+	margin: 5px;
+}
+
+#CustomersRevenueOrdersChart,
+#CustomersStatusOrdersChart {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
+
+.Customer,
+.Employee {
+	margin-top: 5px;
+	padding: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+}
+
+.Customer:hover,
+.Employee:hover {
+	background-color: #ddd;
+}
+
+.Customer,
+.Employee,
+li {
+	list-style-type: none;
+	margin: 3px;
+}
+
+#InfoMap {
+	width: 350px;
+	object-fit: contain;
+	border-radius: 5px;
+	margin: 0px 0px 5px 5px;
+}
+
+#MapVisualization {
+	list-style: none;
+	text-align: center;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	overflow: auto;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+	margin: 5px;
+}
+
+#MapVisualization li {
+	margin: 5px;
+	font-size: 15px;
+	color: #000000;
+	border-bottom: 1px solid #3498db;
+}
+
+#MapVisualization li:hover {
+	color: #3498db;
+	border-bottom: 1px solid #000000;
+}
+
+#MapVisualization::-webkit-scrollbar {
+	width: 0.1em;
+}
+
+#CustomersInfosCharts {
+	display: flex;
+}
+
+#CitiesMostOrders,
+#CitiesMostProfits {
+	border-radius: 5px;
+	background-color: #e4e4e4;
+	margin: 5px;
+}
+
+#CustomersStatistics {
+	display: flex;
+	flex-direction: row;
+}
+
+#CustomersMonthsStatistics p,
+#CitysMonthsStatistics p {
+	margin: 5px;
+	text-align: center;
+	border-bottom: 3px solid #3498db;
+}
+
+#CustomersMonthsStatistics,
+#CitysMonthsStatistics {
+	border-radius: 5px;
+	background-color: #e4e4e4;
+	margin: 5px;
+	padding: 5px;
+}
+
+#CustomersMonthsStatistics span,
+#CitysMonthsStatistics span {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#ItemsBox {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+#Items {
+	display: flex;
+	flex-direction: column;
+	background-color: #99b3ff;
+	border-radius: 5px;
+	margin: 0px 0px 5px 5px;
+}
+
+#ItemsList {
+	overflow: auto;
+}
+
+#ItemsList::-webkit-scrollbar {
+	width: 0.1em;
+}
+
+.Item {
+	margin-top: 5px;
+	padding: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+}
+
+.Item:hover {
+	background-color: #ddd;
+}
+
+.Item li {
+	list-style-type: none;
+	margin: 3px;
+}
+
+#ItemsInfos {
+	display: flex;
+	flex-direction: column;
+	background-color: #99b3ff;
+	border-radius: 5px;
+	margin: 0px 0px 5px 5px;
+}
+
+#ItemsInfosContent {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+#ItemsStatus {
+	display: flex;
+	flex-direction: column;
+}
+#YearItemsStockContent, #MonthItemsStockContent, #WeekItemsStockContent {
+    display: flex;
+    flex-direction: row;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+    flex: 1;
+    margin: 0px 5px 5px 5px;
+    padding-top: 5px;
+}
+#YearItemsStockChart, #MonthItemsStockChart, #WeekItemsStockChart{
+    flex: 1;
+}
+.ItemsStock {
+	padding: 5px;
+}
+
+.ItemsStock p {
+	margin: 5px;
+	text-align: center;
+	border-bottom: 3px solid #3498db;
+}
+
+#MonthsQuantities,
+#MonthsVlaues {
+	display: flex;
+	flex-direction: column;
+    flex: 1;
+    border-radius: 5px;
+	background-color: #e4e4e4;
+    margin: 0px 0px 5px 5px;
+    max-width: 280px;
+}
+
+#CategorysMonthsQuantities,
+#CategorysMonthsVlaues {
+	min-height: 200px;
+
+    padding: 5px;
+}
+
+#CategorysMonthsQuantities p,
+#CategorysMonthsVlaues p {
+	margin: 5px;
+	text-align: center;
+	border-bottom: 3px solid #3498db;
+}
+
+#CategorysMonthsQuantities span,
+#CategorysMonthsVlaues span {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#ItemsCharts {
+	background-color: #99b3ff;
+	border-radius: 5px;
+	margin: 0px 0px 5px 5px;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	flex: 1;
+}
+
+#ItemsCharts::-webkit-scrollbar {
+	width: 0.1em;
+}
+
+#ItemsStockValue,
+#ItemsCategoryValueChart {
+	flex: 1;
+}
+
+#EmployeesContent {
+	display: flex;
+	flex-direction: column;
+	background-color: #99b3ff;
+	padding: 5px;
+	margin: 0px 0px 5px 5px;
+	border-radius: 5px;
+	overflow: auto;
+    flex: 1;
+}
+
+#EmployeesNavigation {
+display: flex;
+flex-direction: row;
+background-color: #e4e4e4;
+border-radius: 5px;
+}
+
+#EmployeesNavigation li {
+font-size: medium;
+list-style: none;
+color: #000000;
+border-right: 3px solid #3498db;
+cursor: pointer;
+padding: 3px;
+border-radius: 5px;
+}
+
+#EmployeesNavigation li:hover {
+color: #3498db;
+border-right: 3px solid #000000;
+}
+
+
+#EmployeeInfoCard {
+    display: flex;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #e4e4e4;
+}
+
+#EmployeeInfoCard li{
+    font-size: medium;
+    list-style: none;
+    color: #000000;
+    border-bottom: 1px solid #3498db;
+    padding: 3px;
+    cursor: pointer;
+    border-color: #3498db;
+}
+#EmployeeInfoCard li:hover {
+    color: #3498db;
+    border-bottom: 1px solid #000000;
+}
+
+
+#EmployeeInfoCharts {
+    display: flex;
+}
+
+#EmployeeInfoCharts::-webkit-scrollbar {
+	width: 0.1em;
+}
+.EmployeeStatusInfoCard {
+    border-radius: 5px;
+    background-color: #e4e4e4;
+    margin: 0px 5px 5px 5px;
+    height: 170px;
+}
+.EmployeeStatusInfoCard p{
+    margin: 0px 3px 0px 3px;
+    padding: 0px 0px 3px 3px;
+    font-size: 15px;
+}
+.employeeChartHold {
+    border-radius: 5px;
+    background-color: #e4e4e4;
+    margin: 0px 5px 0px 5px;
+}
+
+
+#EmployeeStatusInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+#EmployeesChartsContent {
+flex: 1;
+display: flex;
+flex-direction: column;
+overflow: auto;
+margin: 0px 0px 5px 5px;
+background-color: #99b3ff;
+border-radius: 5px;
+}
+
+#EmployeesChartsContent::-webkit-scrollbar {
+width: 0.1em;
+}
+
+/* Sales Tab */
+.SalesTab {
+	display: flex;
+	flex-direction: row;
+	direction: rtl;
+	width: 100%;
+	height: 100%;
+}
+
+.OrdersDataCard, .TreatmentOrderCard {
+	padding: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+}
+
+.OrdersDataCard:hover, .CustomersDataCard:hover, .TreatmentOrderCard:hover {
+	background-color: #ddd;
+}
+
+.OrdersDataCard li, .CustomersDataCard li, .TreatmentOrderCard li{
+	list-style-type: none;
+	margin: 3px;
+}
+
+.CustomersDataCard{
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+}
+.CustomersDataCard a{
+	font-size: medium;
+	color: #000000;
+}
+
+.EmployeeListContainer{
+	overflow: auto;
+	padding: 5px;
+}
+.EmployeeListContainer::-webkit-scrollbar{
+	width: 0.1em;
+}
+/* Holder */
+.EmployeeContainers{
+	display: flex;
+	flex-direction: column;
+	background-color: #899ea9;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+}
+.EmployeeContainers h4{
+	font-size: medium;
+	margin: 0;
+	padding: 5px;
+}
+.EmployeeContainers h5{
+	font-size: small;
+	margin: 0;
+	padding: 5px;
+}
+
+/* Holder */
+#OrderDisplayBox {
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+#OrderDisplayBox button{
+	padding: 5px;
+	margin: 0.3rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #5992ad;
+	height: 25px;
+	width: 80px;
+}
+
+#OrderDisplayBox button:hover {
+	background-color: #29b99a;
+}
+
+
+#OrderInfoData {
+	display: flex;
+	flex-direction: row;
+}
+
+.OrderInfoDataSection {
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+	padding: 5px;
+	min-width: 170px;
+	background-color: #899ea9;
+	border-radius: 5px;
+}
+
+.OrderInfoDataSection p {
+	padding: 3px;
+	margin: 0;
+	font-size: small;
+}
+
+.OrderInfoDataSection label {
+	padding: 3px;
+	margin:0;
+	font-size: small;
+}
+
+.OrderInfoDataSection input {
+	padding: 3px;
+	width: 140px; 
+	height: 10px;
+}
+
+.OrderInfoDataSection input:hover {
+	border-color: #007bff;
+}
+
+#OrderItemsInfo {
+    display: flex;
+    overflow: auto; 
+}
+#OrderItemsInfo::-webkit-scrollbar {
+	width: 0.1em;
+}
+.OrderItemDataCard {
+    border-radius: 5px;
+	margin-top: 5px;
+    padding: 5px;
+    background-color: #e4e4e4;
+    min-width: 150px; 
+}
+
+#OrderDisplayItems {
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #899ea9;
+	overflow: auto;
+	flex: 1;
+}
+#OrderDisplayItems input{
+	margin: 5px;
+}
+
+#OrderDisplayItemsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+}
+
+#OrderDisplayItemsList::-webkit-scrollbar {
+	width: 0.1em;
+}
+
+.item {
+    border-radius: 5px;
+	margin: 5px 0px 0px 0px;
+    padding: 5px;
+    background-color: #e4e4e4;
+    min-width: 120px; 
+	cursor: pointer;
+	text-align: center;
+}
+
+.item:hover {
+background-color: #c7c7c7;
+}
+
+.item img {
+width: 90px;
+height: 90px;
+}
+
+.item p {
+padding: 3px;
+margin: 3px;
+font-size: small;
+}
+
+
+
+/* Technician */
+#TechnicianTab {
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+overflow-y: auto;
+
+}
+
+#HolderScreens {
+flex: 1;
+display: flex;
+flex-direction: column;
+overflow-y: auto;
+}
+#HolderScreensNavigation {
+	display: flex;
+	flex-direction: row;
+	background-color: #505b6c;
+	border-radius: 5px;
+	direction: rtl;
+}
+
+.ScreensNavigationLink {
+	font-size: 20px;
+	list-style: none;
+	color: #000000;
+	border-left: 3px solid #3498db;
+	cursor: pointer;
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.ScreensNavigationLink:hover {
+	color: #3498db;
+	border-left: 1px solid #000000;
+}
+#ChosenScreenDisplay{
+	display: flex;
+    flex-direction: column;
+    background-color: #505b6c;
+    border-radius: 5px;
+    direction: rtl;
+	margin: 5px;
+	padding: 5px;
+	overflow-y: auto;
+	height: 100%;
+}
+.ScreensSections{
+	display: flex;
+	flex-direction: row;
+	margin: 5px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+
+#TechnicianTableData {
+    max-width: 600px;
+    border-radius: 5px;
+	flex: 1;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+}
+#TechnicianTableData::-webkit-scrollbar {
+	width: 0.1em;
+}
+.seletedTableData{
+	width: 180px;
+	display: flex;
+	flex-direction: column;
+    margin: 5px 5px 5px 0px;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: #c7c7c7;
+}
+
+
+.seletedTableData:hover {
+    box-shadow: 0 0px 15px rgb(1, 1, 1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+#TechnicianTableleList{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 5px;
+    flex: 1; 
+    overflow-y: auto; 
+    border-radius: 5px;
+	background-color: #c7c7c7; 
+}
+#TechnicianTableleList::-webkit-scrollbar {
+	width: 0.1em;
+}
+#headerRowTableleList{
+	background-color: #fff;
+	text-align: center;
+	padding-left: 5px;
+	margin: 5px 5px 5 px 5px;
+}
+#TechnicianTableleList th,
+#TechnicianTableleList td {
+padding: 3px;
+font-size: 14px;
+}
+#TechnicianTableleList tr {
+	margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#TechnicianTableleList tr:hover {
+    box-shadow: 0 0px 15px rgb(1, 1, 1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.clicked{
+	color: #fff;
+	cursor: pointer;
+	border-radius: 10px;
+	font-weight:300;
+}
+
+#commandsHolderTab{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 10px;
+}
+
+.commandsLink{
+	margin-bottom: 10px;
+	list-style-type: none;
+	font-size: 17px;
+	color: #000000;
+	border-bottom: 1px solid #3498db;
+	cursor: pointer;
+}
+
+.commandsLink:hover {
+	color: #3498db;
+	border-bottom: 1px solid #000000;
+}
+#ControllerPanelTech {
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    overflow: auto;
+    flex: 1;
+}
+
+#LogFileDisplayTech {
+    overflow: auto;
+    direction: ltr;
+    border-radius: 5px;
+    background-color: #c7c7c7;
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+}
+
+#LogFileDisplayTech::-webkit-scrollbar {
+    width: 0.1em;
+}
+
+#DataTablesDisplayTech {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    flex: 1;
+}
+
+#DataTablesDisplayTech::-webkit-scrollbar {
+    width: 0.1em;
+}
+
+#DataValueTech {
+    overflow: auto;
+}
+
+.dataValueTable {
+    display: block;
+    overflow: auto;
+    border-radius: 5px;
+    background-color: #c7c7c7;
+}
+
+.dataValueTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dataValueTable th,
+.dataValueTable td {
+    padding: 5px;
+    text-align: center;
+    font-size: small;
+}
+
+.dataValueTable td {
+    font-size: 15px;
+}
+
+.dataValueTable thead {
+    display: block;
+}
+
+.dataValueTable tbody {
+    display: block;
+    overflow: auto;
+    max-height: 250px;
+}
+.dataValueTable tbody::-webkit-scrollbar {
+    width: 0.1em;
+}
+.dataValueTable tbody li {
+    font-size: medium;
+    list-style: none;
+    color: #000000;
+    padding: 3px;
+    cursor: pointer;
+    border-color: #3498db;
+}
+.dataValueTable tbody li:hover {
+    color: #3498db;
+}
+.deleteLink{
+	font-size: medium;
+    list-style: none;
+    color: #000000;
+    padding: 3px;
+    cursor: pointer;
+    border-color: #3498db;
+}
+.deleteLink:hover {
+    color: #3498db;
+}
+.dataValueTable tr {
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dataValueTable tr:hover {
+    box-shadow: 0 0px 15px rgb(1, 1, 1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+#SelectedDataCombination{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.CombinationTechTable{
+    background-color: #c7c7c7;
+	margin: 5px 5px 0px 5px;
+    border-radius: 5px;
+}
+#SelectedDataTable{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+}
+.SelectedDataCard{
+    background-color: #c7c7c7;
+	margin: 5px 5px 0px 5px;
+	padding: 0px 5px 5px 5px;
+    border-radius: 5px;
+}
+.SelectedDataCard:hover {
+    box-shadow: 0 0px 15px rgb(1, 1, 1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+

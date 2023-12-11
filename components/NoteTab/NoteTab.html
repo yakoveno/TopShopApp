@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="NoteTab.css">
+    <title>Employee Note</title>
+</head>
+<body>
+    <div id="noteDetails">
+        <h1 class="window-drag">פתק עובד</h1>
+        <div class="noteContent">
+            <p>כותרת: <span id="noteTitle"></span></p>
+            <p>תוכן: <span id="noteText"></span></p>
+            <p>נכתב ב: <span id="noteDate"></span></p>
+            <p>נכתב על ידי: <span id="noteAuthor"></span></p>
+            <p>תפקיד: <span id="noteRole"></span></p>
+        </div>
+        <button id="closeButton">סגור</button>
+        
+    </div>
+    <script>  
+        const closeButton = document.getElementById('closeButton');
+        closeButton.addEventListener('click', () => {
+            window.close();
+        });
+    </script>
+    <script src="NoteTab.js"></script>
+</body>
+</html>

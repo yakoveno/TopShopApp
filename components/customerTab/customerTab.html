@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="customerTab.css">
+    <title>Order Details</title>
+</head>
+<body>
+    <h1 class="window-drag">כרטיס לקוח</h1>
+    <div id="windowClose"><h2 class="window-title">פרטי לקוח</h2></div>
+    <div id="customerDetails">
+        <p id="customerName"></p>
+        <p id="customerEmail"></p>
+        <p id="customerPhone1"></p>
+        <p id="customerPhone2"></p>
+        <p id="customerCity"></p>
+        <p id="customerStreet"></p>
+        <p id="customerStreetNumber"></p>
+        
+    </div>
+    <div id="customerInfo">
+        <div id="customerOrders" class="tab">
+            <h4>הזמנות</h4>
+        </div>
+        <div id="customerItems" class="tab">
+            <h4>מוצרים</h4>
+        </div>
+        <div id="customerEmployees" class="tab">
+            <h4>עובדים</h4>
+        </div>
+    </div>
+    <script src="customerTab.js"></script>
+    <script>
+        const windowClose = document.getElementById("windowClose");
+        const closeButton = document.createElement("li");
+        closeButton.className = "closeButton";
+        closeButton.innerHTML = `סגור`;
+        windowClose.appendChild(closeButton);
+        closeButton.addEventListener('click', () => { window.close(); });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    background-color: #dadaeb;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    direction:rtl;
+}
+.window-drag {
+    margin: 0.3rem;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #5f7393;
+    color: #fff;
+    text-align: right;
+    direction: rtl;
+    font-size: medium;
+    cursor: pointer;
+    -webkit-app-region: drag;
+}
+.window-title {
+    margin:2px;
+    padding-right: 25px;
+    font-size: medium;
+}
+#windowClose{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#customerDetails{
+    padding: 5px;
+    margin: 5px;
+    background-color: #a6c3dd;
+    border-radius: 5px;
+}
+#customerDetails p{
+    font-size: medium;
+    margin: 3px;
+}
+#customerDetails img{
+    width: 100px;
+    height: 100px;
+}
+
+#customerInfo{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.tab{
+    margin: 5px;
+    background-color: #a6c3dd;
+    border-radius: 5px;
+    width: 150px;
+    list-style-type: none;
+    text-align: center;
+    overflow: auto;
+    max-height: 300px;
+}
+.tab::-webkit-scrollbar{width: 0.1em;}
+.tab:hover{
+    background-color: #ddd;
+}
+.tab h4{
+    margin: 3px;
+}
+.tab li{margin: 5px;font-size: 15px;color: #000000; cursor: pointer; }
+.tab li:hover {color: #3498db;}
+
+.closeButton {
+	color: #000000;
+    cursor: pointer;
+    list-style-type: none;
+    margin:2px;
+    padding-left: 25px;
+    font-size: medium;
+    text-align: center;
+    font-weight: bold;
+}
+
+.closeButton:hover{
+	color: #3498db;
+}
+

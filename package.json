@@ -1,0 +1,25 @@
+{
+  "name": "online-store-sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ShopManeger\"",
+    "package-linux": "electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --icon=icons/png/icon.png --prune=true --out=release-builds"
+  },
+  "author": "Alexander",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.3.0",
+    "electron-packager": "^17.1.2",
+    "electron-winstaller": "^5.1.2"
+  },
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "electron-reload": "^2.0.0-alpha.1",
+    "mysql2": "^3.6.1",
+    "promise-mysql": "^5.2.0"
+  }
+}

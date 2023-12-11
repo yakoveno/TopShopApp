@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="itemTab.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="window-drag">כרטיס מוצר</h1>
+    <div id="windowClose"><h2 class="window-title">פרטי מוצר</h2></div>
+    <div id="itemDetails">
+        <img id="itemImage" src="">
+        <p id="itemName"></p>
+        <p id="itemDescription"></p>
+        <p id="itemPrice"></p>
+        <p id="itemStock"></p>
+        <p id="itemBrand"></p>
+        <p id="itemCategory"></p>
+        <p id="itemSerial"></p>
+        <p id="itemActive"></p>
+        
+    </div>
+    <div id="itemsInfo">
+        <div id="itemsCustomers" class="tab">
+            <h4>לקוחות</h4>
+        </div>
+        <div id="itemsEmployees" class="tab">
+            <h4>עובדים</h4>
+        </div>
+        <div id="itemsOrders" class="tab">
+            <h4>הזמנות</h4>
+        </div>
+    </div>
+    <script src="itemTab.js"></script>
+    <script>
+        const windowClose = document.getElementById("windowClose");
+        const closeButton = document.createElement("li");
+        closeButton.className = "closeButton";
+        closeButton.innerHTML = `סגור`;
+        windowClose.appendChild(closeButton);
+        closeButton.addEventListener('click', () => { window.close(); });
+    </script>
+</body>
+</html>

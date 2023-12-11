@@ -1,0 +1,46 @@
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#noteDetails {
+    display: grid;
+    border: 5px solid #5992ad;
+    padding: 5px;
+    border-radius: 5px;
+    direction: rtl;
+    flex-grow: 1;
+}
+
+
+.window-drag {
+    margin: 0.3rem;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #5f7393;
+    color: #fff;
+    text-align: right;
+    direction: rtl;
+    font-size: medium;
+    cursor: pointer;
+    -webkit-app-region: drag;
+}
+.noteContent p{
+    margin: 10px;
+}
+#closeButton {
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border-color: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+#closeButton:hover, #documentButton:hover {
+    background-color: #29b99a;
+}

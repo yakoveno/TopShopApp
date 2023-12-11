@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="orderTab.css">
+    <title>Order Details</title>
+</head>
+<body>
+    <h1 class="window-drag">כרטיס הזמנה</h1>
+    <div id="topContent">
+        <div class="orderInfo">
+            <h2 class="window-title">פרטי הזמנה</h2>
+            <p>מספר הזמנה: <span id="orderNumber"></span></p>
+            <p>תאריך כניסה: <span id="entryDate"></span></p>
+            <p>תאריך שיבוץ: <span id="placementDate"></span></p>
+            <p>תאריך משלוח: <span id="deliveryDate"></span></p>
+            <p>סה"כ פריטים: <span id="totalItems"></span></p>
+            <p>סה"כ מחיר: ₪<span id="totalPrice"></span></p>
+            <p>סטאטוס: <span id="status"></span></p>
+        </div>
+        <div id="customerInfo" class="customerInfo">
+            <h2 class="window-title">פרטי הלקוח</h2>
+            <p>שם: <span id="customerName"></span></p>
+            <p>טלפון 1: <span id="customerPhone1"></span></p>
+            <p>טלפון 2: <span id="customerPhone2"></span></p>
+            <p>אימייל: <span id="customerEmail"></span></p>
+            <p>עיר: <span id="customerCity"></span></p>
+            <p>רחוב: <span id="customerStreet"></span></p>
+            <p>מספר בית: <span id="customerStreetNumber"></span></p>
+        </div>
+        <div id="employeeInfo" class="employeeInfo">
+            <h2 class="window-title">פרטי העובד</h2>
+            <p>שם: <span id="employeeName"></span></p>
+            <p>אימייל: <span id="employeeEmail"></span></p>
+            <p>תפקיד: <span id="employeeRole"></span></p>
+            <p>טלפון: <span id="employeePhone"></span></p>
+        </div>
+    </div> 
+    <div class="bottomContent">
+        <h2 class="window-title">פרטי הפריטים</h2>
+        <div class="itemsInfo"></div>
+    </div>
+    <div>
+    <button id="documentButton">תעודה</button>
+    <button id="closeButton">סגור</button>
+    </div>
+
+    <script>
+        const documentButton = document.getElementById('documentButton');
+        documentButton.addEventListener('click', () => {
+            let textContent = `
+                פרטי הזמנה
+                מספר הזמנה: ${document.getElementById('orderNumber').textContent}
+                תאריך כניסה: ${document.getElementById('entryDate').textContent}
+                תאריך משלוח: ${document.getElementById('deliveryDate').textContent}
+                סה"כ פריטים: ${document.getElementById('totalItems').textContent}
+                סה"כ מחיר: ₪${document.getElementById('totalPrice').textContent}
+                סטאטוס: ${document.getElementById('status').textContent}
+        
+                פרטי הלקוח
+                שם: ${document.getElementById('customerName').textContent}
+                טלפון 1: ${document.getElementById('customerPhone1').textContent}
+                טלפון 2: ${document.getElementById('customerPhone2').textContent}
+                אימייל: ${document.getElementById('customerEmail').textContent}
+                עיר: ${document.getElementById('customerCity').textContent}
+                רחוב: ${document.getElementById('customerStreet').textContent}
+                מספר בית: ${document.getElementById('customerStreetNumber').textContent}
+        
+                פרטי העובד
+                שם: ${document.getElementById('employeeName').textContent}
+                אימייל: ${document.getElementById('employeeEmail').textContent}
+                תפקיד: ${document.getElementById('employeeRole').textContent}
+                טלפון: ${document.getElementById('employeePhone').textContent}
+        
+                פרטי הפריטים
+            `;
+        
+            // Add item details without <img> tags
+            const itemsInfo = document.querySelector('.itemsInfo');
+            const itemDivs = itemsInfo.querySelectorAll('.item');
+        
+            for (let i = 0; i < itemDivs.length; i++) {
+                const itemDiv = itemDivs[i];
+                const itemDetails = itemDiv.textContent;
+                textContent += `
+                    ${itemDetails}
+                `;
+            }
+        
+            const blob = new Blob([textContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const downloadLink = document.createElement('a');
+            downloadLink.href = url;
+            downloadLink.download = 'תעודה.txt';
+            downloadLink.click();
+        });
+        
+        const closeButton = document.getElementById('closeButton');
+        closeButton.addEventListener('click', () => {
+            window.close();
+        });
+
+    </script>
+    <script src="orderTab.js"></script>
+</body>
+</html>
